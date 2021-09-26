@@ -29,7 +29,7 @@ function getMostCommonGenres(books) {
   for (const book of books) {
     genre[book.genre] ? (genre[book.genre] += 1) : (genre[book.genre] = 1);
   }
- result = genresHelper (genre);
+ result = genresHelper(genre);
   return result
   .sort((genreA, genreB) => (genreA.count > genreB.count ? -1 : 1))
   .slice(0, 5);
